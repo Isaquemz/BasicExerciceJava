@@ -264,7 +264,33 @@ public class SequentialStructure {
             Obs.: Salário Bruto - Descontos = Salário Líquido.
          */
 
+        double valorPHora;
+        int horasTrabalhadas;
+        double salarioBruto;
+        double valorIr;
+        double valorInss;
+        double valorSindicato;
 
+        // Recebe os dados
+        System.out.println("Digite quanto você recebe por hora: ");
+        valorPHora = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite quantas horas você trabalhou: ");
+        horasTrabalhadas = Integer.parseInt(input.nextLine());
+
+        // Realiza os calculos
+        salarioBruto = horasTrabalhadas * valorPHora;
+        valorIr = salarioBruto * 0.11;
+        valorInss = salarioBruto * 0.08;
+        valorSindicato = salarioBruto * 0.05;
+
+        System.out.println("-----------------------------");
+        System.out.println("+ Salário Bruto : R$ " + salarioBruto);
+        System.out.println("- IR (11%) : R$ " + valorIr);
+        System.out.println("- INSS (8%) : R$ " + valorInss);
+        System.out.println("- Sindicato ( 5%) : R$ " + valorSindicato);
+        System.out.println("= Salário Liquido : R$ " + (salarioBruto - (valorIr + valorInss + valorSindicato)));
+        System.out.println("-----------------------------");
 
     }
 
