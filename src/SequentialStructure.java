@@ -384,23 +384,42 @@ public class SequentialStructure {
     }
 
     public static void main(String[] args) {
-        // exerciceOne();
-        // exerciceTwo();
-        // exerciceThree();
-        // exerciceFour();
-        // exerciceFive();
-        // exerciceSix();
-        // exerciceSeven();
-        // exerciceEight();
-        // exerciceNine();
-        // exerciceTen();
-        // exerciceEleven();
-        // exerciceTwelve();
-        // exerciceThirteen();
-        // exerciceFourteen();
-        // exerciceFifteen();
-        // exerciceSixteen();
-        // exerciceSeventeen();
+        System.out.println("------- Estruturas Sequenciais -------\n\n");
+        System.out.println("---------- Exercicio 01 --------------\n");
+        exerciceOne();
+        System.out.println("---------- Exercicio 02 --------------\n");
+        exerciceTwo();
+        System.out.println("---------- Exercicio 03 --------------\n");
+        exerciceThree();
+        System.out.println("---------- Exercicio 04 --------------\n");
+        exerciceFour();
+        System.out.println("---------- Exercicio 05 --------------\n");
+        exerciceFive();
+        System.out.println("\n---------- Exercicio 06 --------------\n");
+        exerciceSix();
+        System.out.println("\n---------- Exercicio 07 --------------\n");
+        exerciceSeven();
+        System.out.println("\n---------- Exercicio 08 --------------\n");
+        exerciceEight();
+        System.out.println("---------- Exercicio 09 --------------\n");
+        exerciceNine();
+        System.out.println("\n---------- Exercicio 10 --------------\n");
+        exerciceTen();
+        System.out.println("\n---------- Exercicio 11 --------------\n");
+        exerciceEleven();
+        System.out.println("---------- Exercicio 12 --------------\n");
+        exerciceTwelve();
+        System.out.println("---------- Exercicio 13 --------------\n");
+        exerciceThirteen();
+        System.out.println("---------- Exercicio 14 --------------\n");
+        exerciceFourteen();
+        System.out.println("---------- Exercicio 15 --------------\n");
+        exerciceFifteen();
+        System.out.println("---------- Exercicio 16 --------------\n");
+        exerciceSixteen();
+        System.out.println("---------- Exercicio 17 --------------\n");
+        exerciceSeventeen();
+        System.out.println("---------- Exercicio 18 --------------\n");
         exerciceEighteen();
     }
 
