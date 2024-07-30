@@ -28,10 +28,30 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceTwo() {
+        /*
+            Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+         */
+
+        int num1;
+
+        System.out.println("Digite um numero: ");
+        num1 = Integer.parseInt(input.nextLine());
+
+        if (num1 >= 0) {
+            System.out.println("Esse numero é positivo.");
+        } else {
+            System.out.println("Esse numero é negativo.");
+        }
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
-        System.out.println("---------- Exercicio 01 --------------\n");
-        exerciceOne();
+//        System.out.println("---------- Exercicio 01 --------------\n");
+//        exerciceOne();
+        System.out.println("---------- Exercicio 02 --------------\n");
+        exerciceTwo();
     }
 
 }
