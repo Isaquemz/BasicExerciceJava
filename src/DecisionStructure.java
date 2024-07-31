@@ -46,12 +46,38 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceThree() {
+        /*
+            Faça um Programa que verifique se uma letra digitada é "F" ou "M".
+            Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
+         */
+
+        String letra;
+
+        System.out.println("Digite uma letra: ");
+        letra = input.nextLine();
+
+        switch (letra.toUpperCase()) {
+            case "F":
+                System.out.println("F - Feminino");
+                break;
+            case "M":
+                System.out.println("M - Masculino");
+                break;
+            default:
+                System.out.println("Sexo invalido!");
+        }
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
 //        exerciceOne();
-        System.out.println("---------- Exercicio 02 --------------\n");
-        exerciceTwo();
+//        System.out.println("---------- Exercicio 02 --------------\n");
+//        exerciceTwo();
+        System.out.println("---------- Exercicio 03 --------------\n");
+        exerciceThree();
     }
 
 }
