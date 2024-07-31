@@ -104,6 +104,39 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceFive() {
+        /*
+            Faça um programa para a leitura de duas notas parciais de um aluno.
+            O programa deve calcular a média alcançada por aluno e apresentar:
+                A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+                A mensagem "Reprovado", se a média for menor do que sete;
+                A mensagem "Aprovado com Distinção", se a média for igual a dez.
+         */
+
+        double nota1;
+        double nota2;
+        double media;
+        String mensagem;
+
+        System.out.println("Digite a primeira nota: ");
+        nota1 = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite a segunda nota: ");
+        nota2 = Double.parseDouble(input.nextLine());
+
+        media = (nota1 + nota2) / 2;
+        mensagem = "Reprovado";
+
+        if (media >= 10) {
+            mensagem = "Aprovado com Distinção";
+        } else if (media >= 7) {
+            mensagem = "Aprovado";
+        }
+
+        System.out.println("Sua media foi " + media + " e você foi " + mensagem + "!");
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
@@ -112,8 +145,10 @@ public class DecisionStructure {
 //        exerciceTwo();
 //        System.out.println("---------- Exercicio 03 --------------\n");
 //        exerciceThree();
-        System.out.println("---------- Exercicio 04 --------------\n");
-        exerciceFour();
+//        System.out.println("---------- Exercicio 04 --------------\n");
+//        exerciceFour();
+        System.out.println("---------- Exercicio 05 --------------\n");
+        exerciceFive();
     }
 
 }
