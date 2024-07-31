@@ -70,14 +70,50 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceFour() {
+        /*
+            Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
+         */
+
+        String letra;
+        boolean isVogal;
+        String[] vogais = new String[5];
+
+        vogais[0] = "A";
+        vogais[1] = "E";
+        vogais[2] = "I";
+        vogais[3] = "O";
+        vogais[4] = "U";
+
+        System.out.println("Digite uma letra: ");
+        letra = input.nextLine().toUpperCase();
+
+        isVogal = false;
+        for (String vogal: vogais) {
+            if (letra.equals(vogal)) {
+                isVogal = true;
+                break;
+            }
+        }
+
+        if (isVogal) {
+            System.out.println("A letra é uma vogal.");
+        } else {
+            System.out.println("A letra é uma consoante.");
+        }
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
 //        exerciceOne();
 //        System.out.println("---------- Exercicio 02 --------------\n");
 //        exerciceTwo();
-        System.out.println("---------- Exercicio 03 --------------\n");
-        exerciceThree();
+//        System.out.println("---------- Exercicio 03 --------------\n");
+//        exerciceThree();
+        System.out.println("---------- Exercicio 04 --------------\n");
+        exerciceFour();
     }
 
 }
