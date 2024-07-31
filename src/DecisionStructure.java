@@ -137,6 +137,39 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceSix() {
+        /*
+            Faça um Programa que leia três números e mostre o maior deles.
+         */
+
+        int num1;
+        int num2;
+        int num3;
+        int maior;
+
+        System.out.println("Digite o primeiro numero: ");
+        num1 = Integer.parseInt(input.nextLine());
+
+        System.out.println("Digite o segundo numero: ");
+        num2 = Integer.parseInt(input.nextLine());
+
+        System.out.println("Digite o terceiro numero: ");
+        num3 = Integer.parseInt(input.nextLine());
+
+        maior = num1;
+
+        if (num2 > num1 && num2 > num3) {
+            maior = num2;
+        }
+
+        if (num3 > num1 && num3 > num2) {
+            maior = num3;
+        }
+
+        System.out.println("O maior numero é: " + maior);
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
@@ -147,8 +180,10 @@ public class DecisionStructure {
 //        exerciceThree();
 //        System.out.println("---------- Exercicio 04 --------------\n");
 //        exerciceFour();
-        System.out.println("---------- Exercicio 05 --------------\n");
-        exerciceFive();
+//        System.out.println("---------- Exercicio 05 --------------\n");
+//        exerciceFive();
+        System.out.println("---------- Exercicio 06 --------------\n");
+        exerciceSix();
     }
 
 }
