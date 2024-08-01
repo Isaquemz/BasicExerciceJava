@@ -210,6 +210,40 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceEight() {
+        /*
+            Faça um programa que pergunte o preço de três produtos e
+            informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
+         */
+
+        double valorProduto1;
+        double valorProduto2;
+        double valorProduto3;
+        double menorValor;
+
+        System.out.println("Digite o valor do primeiro produto: ");
+        valorProduto1 = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite o valor do segundo produto: ");
+        valorProduto2 = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite o valor do terceiro produto: ");
+        valorProduto3 = Double.parseDouble(input.nextLine());
+
+        menorValor = valorProduto1;
+
+        if (valorProduto2 <= valorProduto1 && valorProduto2 <= valorProduto3) {
+            menorValor = valorProduto2;
+        }
+
+        if (valorProduto3 <= valorProduto1 && valorProduto3 <= valorProduto2) {
+            menorValor = valorProduto3;
+        }
+
+        System.out.println("O produto de menor valor custa R$ " + menorValor);
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
@@ -224,8 +258,10 @@ public class DecisionStructure {
 //        exerciceFive();
 //        System.out.println("---------- Exercicio 06 --------------\n");
 //        exerciceSix();
-        System.out.println("---------- Exercicio 07 --------------\n");
-        exerciceSeven();
+//        System.out.println("---------- Exercicio 07 --------------\n");
+//        exerciceSeven();
+        System.out.println("---------- Exercicio 08 --------------\n");
+        exerciceEight();
     }
 
 }
