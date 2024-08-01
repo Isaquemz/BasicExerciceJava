@@ -244,6 +244,47 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceNine() {
+        /*
+            Faça um Programa que leia três números e mostre-os em ordem decrescente.
+         */
+
+        int num1;
+        int num2;
+        int num3;
+        int temp;
+
+        System.out.println("Digite o primeiro numero: ");
+        num1 = Integer.parseInt(input.nextLine());
+
+        System.out.println("Digite o segundo numero: ");
+        num2 = Integer.parseInt(input.nextLine());
+
+        System.out.println("Digite o terceiro numero: ");
+        num3 = Integer.parseInt(input.nextLine());
+
+        if (num1 < num2) {
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+        if (num1 < num3) {
+            temp = num1;
+            num1 = num3;
+            num3 = temp;
+        }
+        if (num2 < num3) {
+            temp = num2;
+            num2 = num3;
+            num3 = temp;
+        }
+
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(num3);
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
@@ -260,8 +301,10 @@ public class DecisionStructure {
 //        exerciceSix();
 //        System.out.println("---------- Exercicio 07 --------------\n");
 //        exerciceSeven();
-        System.out.println("---------- Exercicio 08 --------------\n");
-        exerciceEight();
+//        System.out.println("---------- Exercicio 08 --------------\n");
+//        exerciceEight();
+        System.out.println("---------- Exercicio 09 --------------\n");
+        exerciceNine();
     }
 
 }
