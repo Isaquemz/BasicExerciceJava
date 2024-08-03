@@ -285,6 +285,30 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceTen() {
+        /*
+            Faça um Programa que pergunte em que turno você estuda. Peça para digitar
+            M-matutino ou V-Vespertino ou N-Noturno. Imprima a mensagem "Bom Dia!",
+            "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+         */
+
+        String turno;
+
+        System.out.println("Digite o turno que você estuda (M-matutino ou V-Vespertino ou N-Noturno): ");
+        turno = input.nextLine();
+
+        if (turno.equalsIgnoreCase("M")) {
+            System.out.println("Bom dia!");
+        } else if (turno.equalsIgnoreCase("V")) {
+            System.out.println("Boa tarde!");
+        } else if (turno.equalsIgnoreCase("N")) {
+            System.out.println("Boa noite!");
+        } else {
+            System.out.println("Valor Invalido!");
+        }
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
@@ -303,8 +327,11 @@ public class DecisionStructure {
 //        exerciceSeven();
 //        System.out.println("---------- Exercicio 08 --------------\n");
 //        exerciceEight();
-        System.out.println("---------- Exercicio 09 --------------\n");
-        exerciceNine();
+//        System.out.println("---------- Exercicio 09 --------------\n");
+//        exerciceNine();
+        System.out.println("---------- Exercicio 10 --------------\n");
+        exerciceTen();
+
     }
 
 }
