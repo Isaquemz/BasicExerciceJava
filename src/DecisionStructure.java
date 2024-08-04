@@ -355,6 +355,69 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceTwelve() {
+        /*
+            Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda,
+            que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11%
+            do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário
+            Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas
+            trabalhadas no mês.
+                Desconto do IR:
+                    Salário Bruto até 900 (inclusive) - isento
+                    Salário Bruto até 1500 (inclusive) - desconto de 5%
+                    Salário Bruto até 2500 (inclusive) - desconto de 10%
+                    Salário Bruto acima de 2500 - desconto de 20%
+            Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5
+            e a quantidade de hora é 220.
+                Salário Bruto: (5 * 220)        : R$ 1100,00
+                (-) IR (5%)                     : R$   55,00
+                (-) INSS ( 10%)                 : R$  110,00
+                FGTS (11%)                      : R$  121,00
+                Total de descontos              : R$  165,00
+                Salário Liquido                 : R$  935,00
+         */
+
+        double horasTrabalhadas;
+        double valorPorHora;
+        double salarioBruto;
+        double valorInss;
+        double porcentagemIr = 0;
+        double valorIr;
+        double valorFgts;
+        double totalDesconto;
+        double salarioLiquido;
+
+        System.out.println("Digite a quantidade de horas trabalhadas: ");
+        horasTrabalhadas = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite o valor por hora trabalhada: ");
+        valorPorHora = Double.parseDouble(input.nextLine());
+
+        salarioBruto = valorPorHora * horasTrabalhadas;
+
+        if (salarioBruto > 900 && salarioBruto <= 1500) {
+            porcentagemIr = 5;
+        } else if (salarioBruto <= 2500) {
+            porcentagemIr = 10;
+        } else {
+            porcentagemIr = 20;
+        }
+
+        valorIr = salarioBruto * (porcentagemIr / 100);
+        valorInss = salarioBruto * 0.1;
+        valorFgts = salarioBruto * 0.11;
+        totalDesconto = valorIr + valorInss;
+        salarioLiquido = salarioBruto - totalDesconto;
+
+        System.out.println("Salário Bruto: (5 * 220): R$ " + salarioBruto);
+        System.out.printf("(-) IR (%.0f%s)             : R$ %s%n", porcentagemIr, "%", valorIr);
+        System.out.println("(-) INSS (10%)         : R$ " + valorInss);
+        System.out.println("FGTS (11%)              : R$ " + valorFgts);
+        System.out.println("Total de descontos      : R$ " + totalDesconto);
+        System.out.println("Salário Liquido         : R$ " + salarioLiquido);
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
@@ -377,8 +440,10 @@ public class DecisionStructure {
 //        exerciceNine();
 //        System.out.println("---------- Exercicio 10 --------------\n");
 //        exerciceTen();
-        System.out.println("---------- Exercicio 11 --------------\n");
-        exerciceEleven();
+//        System.out.println("---------- Exercicio 11 --------------\n");
+//        exerciceEleven();
+        System.out.println("---------- Exercicio 12 --------------\n");
+        exerciceTwelve();
 
     }
 
