@@ -418,6 +418,46 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceThirteen() {
+        /*
+            Faça um Programa que leia um número e exiba o dia correspondente da semana.
+            (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+         */
+
+        int numeroDiadaSemana;
+
+        System.out.println("Digite o dia da semana: ");
+        numeroDiadaSemana = Integer.parseInt(input.nextLine());
+
+        switch (numeroDiadaSemana) {
+            case 1:
+                System.out.println("Domingo");
+                break;
+            case 2:
+                System.out.println("Segunda-feira");
+                break;
+            case 3:
+                System.out.println("Terça-feira");
+                break;
+            case 4:
+                System.out.println("Quarta-feira");
+                break;
+            case 5:
+                System.out.println("Quinta-feira");
+                break;
+            case 6:
+                System.out.println("Sexta-feira");
+                break;
+            case 7:
+                System.out.println("Sabado");
+                break;
+            default:
+                System.out.println("Valor invalido!");
+                break;
+        }
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
@@ -442,8 +482,10 @@ public class DecisionStructure {
 //        exerciceTen();
 //        System.out.println("---------- Exercicio 11 --------------\n");
 //        exerciceEleven();
-        System.out.println("---------- Exercicio 12 --------------\n");
-        exerciceTwelve();
+//        System.out.println("---------- Exercicio 12 --------------\n");
+//        exerciceTwelve();
+        System.out.println("---------- Exercicio 13 --------------\n");
+        exerciceThirteen();
 
     }
 
