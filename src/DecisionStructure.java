@@ -309,6 +309,52 @@ public class DecisionStructure {
 
     }
 
+    public static void exerciceEleven() {
+        /*
+            As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe
+            contraram para desenvolver o programa que calculará os reajustes.
+            Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério,
+            baseado no salário atual:
+                salários até R$ 280,00 (incluindo) : aumento de 20%
+                salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+                salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+                salários de R$ 1500,00 em diante : aumento de 5%
+            Após o aumento ser realizado, informe na tela:
+                    o salário antes do reajuste;
+                    o percentual de aumento aplicado;
+                    o valor do aumento;
+                    o novo salário, após o aumento.
+         */
+
+        double salarioAtual;
+        double percentualAumento;
+        double valorAumento;
+        double novoSalario;
+
+        System.out.println("Digite seu salario atual: ");
+        salarioAtual = Double.parseDouble(input.nextLine());
+
+        if (salarioAtual <= 280) {
+            percentualAumento = 20;
+        } else if (salarioAtual < 700) {
+            percentualAumento = 15;
+        } else if (salarioAtual < 1500) {
+            percentualAumento = 10;
+        } else {
+            percentualAumento = 5;
+        }
+
+        valorAumento = salarioAtual * (percentualAumento / 100);
+        novoSalario = salarioAtual + valorAumento;
+
+        System.out.println("----- Valores -----");
+        System.out.println("Salario anterior: " + salarioAtual);
+        System.out.println("Percentual de Aumento: " + percentualAumento + "%");
+        System.out.println("Valor de Aumento: " + valorAumento);
+        System.out.println("Novo salario: " + novoSalario);
+
+    }
+
     public static void main(String[] args) {
         System.out.println("-------- Estruturas de Decisao -------\n\n");
 //        System.out.println("---------- Exercicio 01 --------------\n");
@@ -329,8 +375,10 @@ public class DecisionStructure {
 //        exerciceEight();
 //        System.out.println("---------- Exercicio 09 --------------\n");
 //        exerciceNine();
-        System.out.println("---------- Exercicio 10 --------------\n");
-        exerciceTen();
+//        System.out.println("---------- Exercicio 10 --------------\n");
+//        exerciceTen();
+        System.out.println("---------- Exercicio 11 --------------\n");
+        exerciceEleven();
 
     }
 
