@@ -528,8 +528,33 @@ public class DecisionStructure {
                 Triângulo Escaleno: três lados diferentes;
          */
 
+        double lado1;
+        double lado2;
+        double lado3;
+        boolean isTriangulo;
 
+        System.out.println("Digite a lado 1: ");
+        lado1 = Double.parseDouble(input.nextLine());
 
+        System.out.println("Digite a lado 2: ");
+        lado2 = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite a lado 3: ");
+        lado3 = Double.parseDouble(input.nextLine());
+
+        isTriangulo = (lado1 + lado2) > lado3 || (lado1 + lado3) > lado2 || (lado2 + lado3) > lado1;
+
+        if (isTriangulo) {
+            if (lado1 == lado2 && lado1 == lado3 && lado2 == lado3) {
+                System.out.println("Esse é um triangulo Equilátero.");
+            } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+                System.out.println("Esse é um triangulo Isósceles.");
+            } else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3) {
+                System.out.println("Esse é um triangulo Escaleno.");
+            }
+        } else {
+            System.out.println("Esse não é um triangulo valido!");
+        }
     }
 
     public static void exerciceSixteen() {
@@ -740,10 +765,10 @@ public class DecisionStructure {
 //        exerciceTwelve();
 //        System.out.println("---------- Exercicio 13 --------------\n");
 //        exerciceThirteen();
-        System.out.println("---------- Exercicio 14 --------------\n");
-        exerciceFourteen();
-//        System.out.println("---------- Exercicio 15 --------------\n");
-//        exerciceFifteen();
+//        System.out.println("---------- Exercicio 14 --------------\n");
+//        exerciceFourteen();
+        System.out.println("---------- Exercicio 15 --------------\n");
+        exerciceFifteen();
 //        System.out.println("---------- Exercicio 16 --------------\n");
 //        exerciceSixteen();
 //        System.out.println("---------- Exercicio 17 --------------\n");
