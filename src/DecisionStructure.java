@@ -570,7 +570,44 @@ public class DecisionStructure {
                 Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
          */
 
+        double a;
+        double b;
+        double c;
+        double delta;
+        double x1;
+        double x2;
 
+        System.out.println("Digite o valor de a: ");
+        a = Double.parseDouble(input.nextLine());
+
+        if (a != 0) {
+
+            System.out.println("Digite o valor de b: ");
+            b = Double.parseDouble(input.nextLine());
+
+            System.out.println("Digite o valor de c: ");
+            c = Double.parseDouble(input.nextLine());
+
+            delta = Math.pow(b, 2) - 4 * a * c;
+
+            if (delta < 0 ) {
+                System.out.println("A equação não possui raizes reais.");
+            } else {
+                if (delta == 0) {
+                    x1 = -b / (2 * a);
+                    System.out.println("A equação possui apenas uma raiz real");
+                    System.out.println("x = " + x1);
+                } else {
+                    x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    System.out.println("A equação possui duas raiz reais");
+                    System.out.println("x1 = " + x1);
+                    System.out.println("x2 = " + x2);
+                }
+            }
+        } else {
+            System.out.println("Essa equação não é de segundo grau.");
+        }
 
     }
 
@@ -767,10 +804,10 @@ public class DecisionStructure {
 //        exerciceThirteen();
 //        System.out.println("---------- Exercicio 14 --------------\n");
 //        exerciceFourteen();
-        System.out.println("---------- Exercicio 15 --------------\n");
-        exerciceFifteen();
-//        System.out.println("---------- Exercicio 16 --------------\n");
-//        exerciceSixteen();
+//        System.out.println("---------- Exercicio 15 --------------\n");
+//        exerciceFifteen();
+        System.out.println("---------- Exercicio 16 --------------\n");
+        exerciceSixteen();
 //        System.out.println("---------- Exercicio 17 --------------\n");
 //        exerciceSeventeen();
 //        System.out.println("---------- Exercicio 18 --------------\n");
