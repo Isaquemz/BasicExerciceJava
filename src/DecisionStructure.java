@@ -617,7 +617,18 @@ public class DecisionStructure {
             informe se este ano é ou não bissexto.
          */
 
+        String anoTexto;
+        int ano;
 
+        System.out.println("Digite o ano: ");
+        anoTexto = input.nextLine();
+        ano = Integer.parseInt(anoTexto.substring(anoTexto.length() - 2));
+
+        if (ano % 4 == 0) {
+            System.out.printf("%s é um ano bissexto.%n", anoTexto);
+        } else {
+            System.out.printf("%s não é um ano bissexto.%n", anoTexto);
+        }
 
     }
 
@@ -806,10 +817,10 @@ public class DecisionStructure {
 //        exerciceFourteen();
 //        System.out.println("---------- Exercicio 15 --------------\n");
 //        exerciceFifteen();
-        System.out.println("---------- Exercicio 16 --------------\n");
-        exerciceSixteen();
-//        System.out.println("---------- Exercicio 17 --------------\n");
-//        exerciceSeventeen();
+//        System.out.println("---------- Exercicio 16 --------------\n");
+//        exerciceSixteen();
+        System.out.println("---------- Exercicio 17 --------------\n");
+        exerciceSeventeen();
 //        System.out.println("---------- Exercicio 18 --------------\n");
 //        exerciceEighteen();
 //        System.out.println("---------- Exercicio 19 --------------\n");
