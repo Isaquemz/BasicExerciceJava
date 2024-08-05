@@ -472,7 +472,46 @@ public class DecisionStructure {
             o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
          */
 
+        double nota1;
+        double nota2;
+        double media;
+        String conceito;
 
+        System.out.println("Digite a nota 1: ");
+        nota1 = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite a nota 2: ");
+        nota2 = Double.parseDouble(input.nextLine());
+
+        media = (nota1 + nota2) / 2;
+
+        if (media > 9 && media <= 10) {
+            conceito = "A";
+        } else if (media > 7.5 && media <= 9) {
+            conceito = "B";
+        } else if (media > 6 && media <= 7.5) {
+            conceito = "C";
+        } else if (media > 4 && media <= 6) {
+            conceito = "D";
+        } else if (media >=0 && media <= 4) {
+            conceito = "E";
+        } else {
+            conceito = "Conceito fora do intervalo.";
+        }
+
+        switch (conceito) {
+            case "A":
+            case "B":
+            case "C":
+                System.out.printf("Categoria %s - Aprovado%n", conceito);
+                break;
+            case "D":
+            case "E":
+                System.out.printf("Categoria %s - Reprovado%n", conceito);
+                break;
+            default:
+                System.out.println(conceito);
+        }
 
     }
 
@@ -699,10 +738,10 @@ public class DecisionStructure {
 //        exerciceEleven();
 //        System.out.println("---------- Exercicio 12 --------------\n");
 //        exerciceTwelve();
-        System.out.println("---------- Exercicio 13 --------------\n");
-        exerciceThirteen();
-//        System.out.println("---------- Exercicio 14 --------------\n");
-//        exerciceFourteen();
+//        System.out.println("---------- Exercicio 13 --------------\n");
+//        exerciceThirteen();
+        System.out.println("---------- Exercicio 14 --------------\n");
+        exerciceFourteen();
 //        System.out.println("---------- Exercicio 15 --------------\n");
 //        exerciceFifteen();
 //        System.out.println("---------- Exercicio 16 --------------\n");
