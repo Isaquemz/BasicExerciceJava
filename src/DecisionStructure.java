@@ -888,7 +888,16 @@ public class DecisionStructure {
             Dica: utilize uma função de arredondamento.
          */
 
+        double numero;
 
+        System.out.println("Digite um numero: ");
+        numero = Double.parseDouble(input.nextLine());
+
+        if (numero == Math.round(numero)) {
+            System.out.println("Esse é um numero inteiro.");
+        } else {
+            System.out.println("Esse é um numero decimal.");
+        }
 
     }
 
@@ -1017,10 +1026,10 @@ public class DecisionStructure {
 //        exerciceTwenty();
 //        System.out.println("---------- Exercicio 21 --------------\n");
 //        exerciceTwentyOne();
-        System.out.println("---------- Exercicio 22 --------------\n");
-        exerciceTwentyTwo();
-//        System.out.println("---------- Exercicio 23 --------------\n");
-//        exerciceTwentyThree();
+//        System.out.println("---------- Exercicio 22 --------------\n");
+//        exerciceTwentyTwo();
+        System.out.println("---------- Exercicio 23 --------------\n");
+        exerciceTwentyThree();
 //        System.out.println("---------- Exercicio 24 --------------\n");
 //        exerciceTwentyFour();
 //        System.out.println("---------- Exercicio 25 --------------\n");
