@@ -637,7 +637,72 @@ public class DecisionStructure {
             Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.
          */
 
+        String data;
+        int index;
+        int valor;
+        int dia = 0;
+        int mes = 0;
+        int ano = 0;
+        boolean isValid;
+        boolean matches;
 
+        System.out.println("Digite uma data no formato dd/mm/aaaa: ");
+        data = input.nextLine();
+
+        isValid = true;
+        index = 0;
+        for (String a: data.split("/")) {
+            valor = Integer.parseInt(a);
+            switch (index) {
+                case 0:
+                    if (valor <= 0 || valor > 31) {
+                        isValid = false;
+                    }
+                    dia = valor;
+                    break;
+                case 1:
+                    if (valor <= 0 || valor > 12) {
+                        isValid = false;
+                    }
+                    mes = valor;
+                    break;
+                case 2:
+                    if (valor <= 0 || valor > 9999) {
+                        isValid = false;
+                    }
+                    ano = valor;
+                    break;
+            }
+            index++;
+        }
+
+        // Validações extras no dia
+        if (isValid) {
+
+            matches = mes == 4 ||
+                    mes == 6 ||
+                    mes == 9 ||
+                    mes  == 11;
+
+            matches = (matches && dia == 31) || // Meses que vão só ate dia 30
+                    (mes == 2 && (
+                            (ano % 4 == 0 && dia > 29) || // Bissexto tem 29 dias
+                            (ano % 4 != 0 && dia > 28) // Fevereiro tem 28 dias
+                    ));
+
+            // Se entrar em alguma validação, considera uma data invalida
+            if (matches) {
+                isValid = false;
+            }
+
+        }
+
+
+        if (isValid) {
+            System.out.println("Essa é uma data valida.");
+        } else {
+            System.out.println("Essa não é uma data valida.");
+        }
 
     }
 
@@ -819,10 +884,10 @@ public class DecisionStructure {
 //        exerciceFifteen();
 //        System.out.println("---------- Exercicio 16 --------------\n");
 //        exerciceSixteen();
-        System.out.println("---------- Exercicio 17 --------------\n");
-        exerciceSeventeen();
-//        System.out.println("---------- Exercicio 18 --------------\n");
-//        exerciceEighteen();
+//        System.out.println("---------- Exercicio 17 --------------\n");
+//        exerciceSeventeen();
+        System.out.println("---------- Exercicio 18 --------------\n");
+        exerciceEighteen();
 //        System.out.println("---------- Exercicio 19 --------------\n");
 //        exerciceNineteen();
 //        System.out.println("---------- Exercicio 20 --------------\n");
