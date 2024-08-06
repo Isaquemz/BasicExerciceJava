@@ -804,7 +804,62 @@ public class DecisionStructure {
                 quatro notas de 10, uma nota de 5 e quatro notas de 1.
          */
 
+        int valorSaque;
+        int valorRestanteCalcular;
+        int notas100;
+        int notas50;
+        int notas10;
+        int notas5;
+        int notas1;
+        String mensagem;
 
+        System.out.println("Digite o valor que deseja sacar: ");
+        valorSaque = Integer.parseInt(input.nextLine());
+
+        if (valorSaque >= 10 && valorSaque <= 600) {
+
+            notas100 = valorSaque / 100;
+            valorRestanteCalcular = valorSaque - (notas100 * 100);
+
+            notas50 = valorRestanteCalcular / 50;
+            valorRestanteCalcular -= (notas50 * 50);
+
+            notas10 = valorRestanteCalcular / 10;
+            valorRestanteCalcular -= (notas10 * 10);
+
+            notas5 = valorRestanteCalcular / 5;
+            valorRestanteCalcular -= (notas5 * 5);
+
+            notas1 = valorRestanteCalcular;
+
+            if (notas100 > 0 ) {
+                mensagem = notas100 + (notas100 == 1 ? " nota" : " notas") + " de 100 reais.";
+                System.out.println(mensagem);
+            }
+
+            if (notas50 > 0 ) {
+                mensagem = notas50 + (notas50 == 1 ? " nota" : " notas") + " de 50 reais.";
+                System.out.println(mensagem);
+            }
+
+            if (notas10 > 0 ) {
+                mensagem = notas10 + (notas10 == 1 ? " nota" : " notas") + " de 10 reais.";
+                System.out.println(mensagem);
+            }
+
+            if (notas5 > 0 ) {
+                mensagem = notas5 + (notas5 == 1 ? " nota" : " notas") + " de 5 reais.";
+                System.out.println(mensagem);
+            }
+
+            if (notas1 > 0 ) {
+                mensagem = notas1 + (notas1 == 1 ? " nota" : " notas") + " de 1 real.";
+                System.out.println(mensagem);
+            }
+
+        } else {
+            System.out.println("Valor não permitido.");
+        }
 
     }
 
@@ -949,10 +1004,10 @@ public class DecisionStructure {
 //        exerciceEighteen();
 //        System.out.println("---------- Exercicio 19 --------------\n");
 //        exerciceNineteen();
-        System.out.println("---------- Exercicio 20 --------------\n");
-        exerciceTwenty();
-//        System.out.println("---------- Exercicio 21 --------------\n");
-//        exerciceTwentyOne();
+//        System.out.println("---------- Exercicio 20 --------------\n");
+//        exerciceTwenty();
+        System.out.println("---------- Exercicio 21 --------------\n");
+        exerciceTwentyOne();
 //        System.out.println("---------- Exercicio 22 --------------\n");
 //        exerciceTwentyTwo();
 //        System.out.println("---------- Exercicio 23 --------------\n");
