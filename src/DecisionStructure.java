@@ -760,7 +760,35 @@ public class DecisionStructure {
                 A mensagem "Aprovado com Distinção", se a média for igual a 10.
          */
 
+        double nota1;
+        double nota2;
+        double nota3;
+        double media;
+        String status;
 
+        System.out.println("Digite a primeira nota: ");
+        nota1 = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite a segunda nota: ");
+        nota2 = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite a terceira nota: ");
+        nota3 = Double.parseDouble(input.nextLine());
+
+        media = (nota1 + nota2 + nota3) / 3;
+
+        if (media < 0 || media > 10) {
+            System.out.printf("Notas/Media invalida: %.2f%n", media);
+        } else {
+            if (media == 10) {
+                status = "Aprovado com Distinção";
+            } else if (media >= 7) {
+                status = "Aprovado";
+            } else {
+                status = "Reprovado";
+            }
+            System.out.printf("Você tirou a nota %.2f e foi %s.%n", media, status);
+        }
 
     }
 
@@ -919,10 +947,10 @@ public class DecisionStructure {
 //        exerciceSeventeen();
 //        System.out.println("---------- Exercicio 18 --------------\n");
 //        exerciceEighteen();
-        System.out.println("---------- Exercicio 19 --------------\n");
-        exerciceNineteen();
-//        System.out.println("---------- Exercicio 20 --------------\n");
-//        exerciceTwenty();
+//        System.out.println("---------- Exercicio 19 --------------\n");
+//        exerciceNineteen();
+        System.out.println("---------- Exercicio 20 --------------\n");
+        exerciceTwenty();
 //        System.out.println("---------- Exercicio 21 --------------\n");
 //        exerciceTwentyOne();
 //        System.out.println("---------- Exercicio 22 --------------\n");
