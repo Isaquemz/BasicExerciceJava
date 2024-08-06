@@ -910,7 +910,52 @@ public class DecisionStructure {
                 inteiro ou decimal.
          */
 
+        double[] num = new double[2];
+        int operacao;
 
+        System.out.println("Digite o primeiro numero: ");
+        num[0] = Double.parseDouble(input.nextLine());
+
+        System.out.println("Digite o segundo numero: ");
+        num[1] = Double.parseDouble(input.nextLine());
+
+        System.out.println("-----------------------------");
+        System.out.println("Digite a operação que deseja realizar.");
+        System.out.println("Opção 1 : Par ou Impar");
+        System.out.println("Opção 2 : Positivo ou Negativo");
+        System.out.println("Opção 3 : Inteiro ou Decimal");
+        System.out.println("-----------------------------");
+        operacao = Integer.parseInt(input.nextLine());
+
+        if (operacao < 1 || operacao > 3) {
+            System.out.println("Opção invalida!");
+        } else {
+            for (double number : num) {
+                switch (operacao) {
+                    case 1:
+                        if (number % 2 == 0) {
+                            System.out.printf("%.2f é um numero par.%n", number);
+                        } else {
+                            System.out.printf("%.2f é um numero impar.%n", number);
+                        }
+                        break;
+                    case 2:
+                        if (number >= 0) {
+                            System.out.printf("%.2f é um numero positivo.%n", number);
+                        } else {
+                            System.out.printf("%.2f é um numero negativo.%n", number);
+                        }
+                        break;
+                    case 3:
+                        if (number == Math.round(number)) {
+                            System.out.printf("%.2f é um numero inteiro.%n", number);
+                        } else {
+                            System.out.printf("%.2f é um numero decimal.%n", number);
+                        }
+                        break;
+                }
+            }
+        }
 
     }
 
@@ -1028,10 +1073,10 @@ public class DecisionStructure {
 //        exerciceTwentyOne();
 //        System.out.println("---------- Exercicio 22 --------------\n");
 //        exerciceTwentyTwo();
-        System.out.println("---------- Exercicio 23 --------------\n");
-        exerciceTwentyThree();
-//        System.out.println("---------- Exercicio 24 --------------\n");
-//        exerciceTwentyFour();
+//        System.out.println("---------- Exercicio 23 --------------\n");
+//        exerciceTwentyThree();
+        System.out.println("---------- Exercicio 24 --------------\n");
+        exerciceTwentyFour();
 //        System.out.println("---------- Exercicio 25 --------------\n");
 //        exerciceTwentyFive();
 //        System.out.println("---------- Exercicio 26 --------------\n");
