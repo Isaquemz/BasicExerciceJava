@@ -966,13 +966,60 @@ public class DecisionStructure {
                 "Esteve no local do crime?"
                 "Mora perto da vítima?"
                 "Devia para a vítima?"
-                "Já trabalhou com a vítima?" O programa deve no final emitir uma classificação sobre a participação da
-                pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como
-                "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado
-                como "Inocente".
+                "Já trabalhou com a vítima?"
+            O programa deve no final emitir uma classificação sobre a participação da
+            pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como
+            "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado
+            como "Inocente".
          */
 
+        int quantidadeRespostaPositiva = 0;
+        int resposta;
 
+        System.out.println("Telefonou para a vítima? 1 - Sim");
+        resposta = Integer.parseInt(input.nextLine());
+        if (resposta == 1) {
+            quantidadeRespostaPositiva += 1;
+        }
+
+        System.out.println("Esteve no local do crime? 1 - Sim");
+        resposta = Integer.parseInt(input.nextLine());
+        if (resposta == 1) {
+            quantidadeRespostaPositiva += 1;
+        }
+
+        System.out.println("Mora perto da vítima? 1 - Sim");
+        resposta = Integer.parseInt(input.nextLine());
+        if (resposta == 1) {
+            quantidadeRespostaPositiva += 1;
+        }
+
+        System.out.println("Devia para a vítima? 1 - Sim");
+        resposta = Integer.parseInt(input.nextLine());
+        if (resposta == 1) {
+            quantidadeRespostaPositiva += 1;
+        }
+
+        System.out.println("Já trabalhou com a vítima? 1 - Sim");
+        resposta = Integer.parseInt(input.nextLine());
+        if (resposta == 1) {
+            quantidadeRespostaPositiva += 1;
+        }
+
+        switch (quantidadeRespostaPositiva) {
+            case 2:
+                System.out.println("Você é suspeita!");
+                break;
+            case 3,4:
+                System.out.println("Você é cumplice!");
+                break;
+            case 5:
+                System.out.println("Você é culpado!");
+                break;
+            default:
+                System.out.println("Você é inocente!");
+                break;
+        }
 
     }
 
@@ -1075,10 +1122,10 @@ public class DecisionStructure {
 //        exerciceTwentyTwo();
 //        System.out.println("---------- Exercicio 23 --------------\n");
 //        exerciceTwentyThree();
-        System.out.println("---------- Exercicio 24 --------------\n");
-        exerciceTwentyFour();
-//        System.out.println("---------- Exercicio 25 --------------\n");
-//        exerciceTwentyFive();
+//        System.out.println("---------- Exercicio 24 --------------\n");
+//        exerciceTwentyFour();
+        System.out.println("---------- Exercicio 25 --------------\n");
+        exerciceTwentyFive();
 //        System.out.println("---------- Exercicio 26 --------------\n");
 //        exerciceTwentySix();
 //        System.out.println("---------- Exercicio 27 --------------\n");
