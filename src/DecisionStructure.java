@@ -716,7 +716,38 @@ public class DecisionStructure {
                 21, 11, 1, 7 e 16
          */
 
+        int num;
+        int centenas;
+        int dezenas;
+        int unidades;
+        String mensagem = "";
 
+        System.out.println("Digite um numero: ");
+        num = Integer.parseInt(input.nextLine());
+
+        centenas = num / 100;
+        dezenas = (num - (centenas * 100)) / 10;
+        unidades = num - ((centenas * 100) + (dezenas * 10));
+
+        if (centenas > 0) {
+            mensagem = centenas + (centenas == 1 ? " centena": " centenas");
+        }
+
+        if (dezenas > 0) {
+            if (centenas > 0) {
+                mensagem = mensagem + (unidades > 0 ? ", " : " e ");
+            }
+            mensagem = mensagem + dezenas + (dezenas == 1 ? " dezena": " dezenas");
+        }
+
+        if (unidades > 0) {
+            if (dezenas > 0 ||centenas > 0) {
+                mensagem = mensagem + " e ";
+            }
+            mensagem = mensagem + unidades + (unidades == 1 ? " unidade": " unidades");
+        }
+
+        System.out.println(mensagem);
 
     }
 
@@ -886,10 +917,10 @@ public class DecisionStructure {
 //        exerciceSixteen();
 //        System.out.println("---------- Exercicio 17 --------------\n");
 //        exerciceSeventeen();
-        System.out.println("---------- Exercicio 18 --------------\n");
-        exerciceEighteen();
-//        System.out.println("---------- Exercicio 19 --------------\n");
-//        exerciceNineteen();
+//        System.out.println("---------- Exercicio 18 --------------\n");
+//        exerciceEighteen();
+        System.out.println("---------- Exercicio 19 --------------\n");
+        exerciceNineteen();
 //        System.out.println("---------- Exercicio 20 --------------\n");
 //        exerciceTwenty();
 //        System.out.println("---------- Exercicio 21 --------------\n");
@@ -911,3 +942,4 @@ public class DecisionStructure {
     }
 
 }
+
