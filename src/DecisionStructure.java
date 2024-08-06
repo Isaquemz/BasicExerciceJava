@@ -869,7 +869,16 @@ public class DecisionStructure {
             operador módulo (resto da divisão).
          */
 
+        int numero;
 
+        System.out.println("Digite um numero: ");
+        numero = Integer.parseInt(input.nextLine());
+
+        if (numero % 2 == 0) {
+            System.out.println("O numero é par.");
+        } else {
+            System.out.println("O numero não é par.");
+        }
 
     }
 
@@ -1006,10 +1015,10 @@ public class DecisionStructure {
 //        exerciceNineteen();
 //        System.out.println("---------- Exercicio 20 --------------\n");
 //        exerciceTwenty();
-        System.out.println("---------- Exercicio 21 --------------\n");
-        exerciceTwentyOne();
-//        System.out.println("---------- Exercicio 22 --------------\n");
-//        exerciceTwentyTwo();
+//        System.out.println("---------- Exercicio 21 --------------\n");
+//        exerciceTwentyOne();
+        System.out.println("---------- Exercicio 22 --------------\n");
+        exerciceTwentyTwo();
 //        System.out.println("---------- Exercicio 23 --------------\n");
 //        exerciceTwentyThree();
 //        System.out.println("---------- Exercicio 24 --------------\n");
