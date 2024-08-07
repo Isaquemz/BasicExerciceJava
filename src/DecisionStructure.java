@@ -1037,7 +1037,50 @@ public class DecisionStructure {
             do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90.
          */
 
+        String tipoCombustivel;
+        double litrosVendidos;
+        double porcentagemDesconto = 0;
+        double precoLitro = 0;
+        double valorBruto;
+        double valorDesconto;
+        double valorAPagar;
 
+        System.out.println("Digite o tipo de combustivel (A-álcool, G-gasolina): ");
+        tipoCombustivel = input.nextLine();
+
+        System.out.println("Digite a quantidade de litros vendidos: ");
+        litrosVendidos = Double.parseDouble(input.nextLine());
+
+        if (tipoCombustivel.equalsIgnoreCase("A")) {
+            precoLitro = 1.9;
+            if (litrosVendidos <= 20) {
+                porcentagemDesconto = 3;
+            } else {
+                porcentagemDesconto = 5;
+            }
+        }
+        else if (tipoCombustivel.equalsIgnoreCase("G")) {
+            precoLitro = 2.5;
+            if (litrosVendidos <= 20) {
+                porcentagemDesconto = 4;
+            } else {
+                porcentagemDesconto = 6;
+            }
+        }
+        else {
+            System.out.println("Tipo de combustivel invalido.");
+        }
+
+        valorBruto = litrosVendidos * precoLitro;
+        valorDesconto = valorBruto * (porcentagemDesconto / 100);
+        valorAPagar = valorBruto - valorDesconto;
+
+        System.out.println("----------- Nota Fiscal -----------");
+        System.out.printf("Preço por litro - R$ %.2f%n", precoLitro);
+        System.out.printf("Litros - %.2f%n", litrosVendidos);
+        System.out.printf("Valor Bruto - R$ %.2f%n", valorBruto);
+        System.out.printf("Desconto (%.0f%%) - R$ %.2f%n", porcentagemDesconto, valorDesconto);
+        System.out.printf("Total a pagar - R$ %.2f%n", valorAPagar);
 
     }
 
@@ -1124,10 +1167,10 @@ public class DecisionStructure {
 //        exerciceTwentyThree();
 //        System.out.println("---------- Exercicio 24 --------------\n");
 //        exerciceTwentyFour();
-        System.out.println("---------- Exercicio 25 --------------\n");
-        exerciceTwentyFive();
-//        System.out.println("---------- Exercicio 26 --------------\n");
-//        exerciceTwentySix();
+//        System.out.println("---------- Exercicio 25 --------------\n");
+//        exerciceTwentyFive();
+        System.out.println("---------- Exercicio 26 --------------\n");
+        exerciceTwentySix();
 //        System.out.println("---------- Exercicio 27 --------------\n");
 //        exerciceTwentySeven();
 //        System.out.println("---------- Exercicio 28 --------------\n");
