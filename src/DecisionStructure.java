@@ -1095,44 +1095,40 @@ public class DecisionStructure {
             morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.
          */
 
-        String frutaEscolhida;
         double porcentagemDesconto = 0;
-        double precoKg = 0;
-        double quantidadeKg;
+
+        double precoKgMaca = 0;
+        double quantidadeKgMaca = 0;
+        double precoKgMorango = 0;
+        double quantidadeKgMorango = 0;
+        double quantidadeKgTotal = 0;
         double valorBruto;
         double valorDesconto;
         double valorAPagar;
 
-        System.out.println("Digite a fruta que deseja comprar (Morango, Maça): ");
-        frutaEscolhida = input.nextLine();
+        System.out.println("Digite a quantidade de quilos de Maça: ");
+        quantidadeKgMaca = Double.parseDouble(input.nextLine());
+        quantidadeKgTotal += quantidadeKgMaca;
 
-        System.out.println("Digite a quantidade de quilos: ");
-        quantidadeKg = Double.parseDouble(input.nextLine());
+        System.out.println("Digite a quantidade de quilos de Morango: ");
+        quantidadeKgMorango = Double.parseDouble(input.nextLine());
+        quantidadeKgTotal += quantidadeKgMorango;
 
-        if (frutaEscolhida.equalsIgnoreCase("Morango")) {
-            if (quantidadeKg <= 5) {
-                precoKg = 2.5;
-            } else {
-                precoKg = 2.2;
-            }
-        }
-        else if (frutaEscolhida.equalsIgnoreCase("Maça") ||
-                frutaEscolhida.equalsIgnoreCase("Maca") ||
-                frutaEscolhida.equalsIgnoreCase("Maçã") ||
-                frutaEscolhida.equalsIgnoreCase("Macã")) {
-            if (quantidadeKg <= 5) {
-                precoKg = 1.8;
-            } else {
-                precoKg = 1.5;
-            }
-        }
-        else {
-            System.out.println("Fruta invalida.");
+        if (quantidadeKgMorango <= 5) {
+            precoKgMorango = 2.5;
+        } else {
+            precoKgMorango = 2.2;
         }
 
-        valorBruto = quantidadeKg * precoKg;
+        if (quantidadeKgMaca <= 5) {
+            precoKgMaca = 1.8;
+        } else {
+            precoKgMaca = 1.5;
+        }
 
-        if (quantidadeKg > 8 || valorBruto > 25) {
+        valorBruto = (quantidadeKgMaca * precoKgMaca) + (quantidadeKgMorango * precoKgMorango);
+
+        if (quantidadeKgTotal > 8 || valorBruto > 25) {
             porcentagemDesconto = 10;
         }
 
@@ -1140,8 +1136,7 @@ public class DecisionStructure {
         valorAPagar = valorBruto - valorDesconto;
 
         System.out.println("----------- Nota Fiscal -----------");
-        System.out.printf("Preço por KG - R$ %.2f%n", precoKg);
-        System.out.printf("Quilos - %.2f%n", quantidadeKg);
+        System.out.printf("Quilos - %.2f%n", quantidadeKgTotal);
         System.out.printf("Valor Bruto - R$ %.2f%n", valorBruto);
         System.out.printf("Desconto (%.0f%%) - R$ %.2f%n", porcentagemDesconto, valorDesconto);
         System.out.printf("Total a pagar - R$ %.2f%n", valorAPagar);
