@@ -1150,14 +1150,70 @@ public class DecisionStructure {
                 File Duplo      R$ 4,90 por Kg          R$ 5,80 por Kg
                 Alcatra         R$ 5,90 por Kg          R$ 6,80 por Kg
                 Picanha         R$ 6,90 por Kg          R$ 7,80 por Kg
-            Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção,
+//            Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção,
             porém não há limites para a quantidade de carne por cliente. Se compra for feita no cartão Tabajara
             o cliente receberá ainda um desconto de 5% sobre o total da compra. Escreva um programa que peça o
             tipo e a quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da
             compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.
          */
 
+        boolean isTabajara = false;
+        boolean isTipoCarneValido = true;
+        String opcao;
+        String tipoCarne;
+        double quantidadesKg;
+        double porcentagemDesconto = 0;
+        double precoKg = 0;
+        double valorBruto;
+        double valorDesconto;
+        double valorAPagar;
 
+        System.out.println("Digite o tipo de carne (File Duplo, Alcatra, Picanha): ");
+        tipoCarne = input.nextLine();
+
+        System.out.println("Digite a quantidade de quilos que deseja comprar: ");
+        quantidadesKg = Double.parseDouble(input.nextLine());
+
+        System.out.println("Deseja usar o cartão Tabajara? 1 - Sim");
+        opcao = input.nextLine();
+
+        if (tipoCarne.equalsIgnoreCase("File Duplo")) {
+            precoKg = 4.9;
+        }
+        else if (tipoCarne.equalsIgnoreCase("Alcatra")) {
+            precoKg = 5.9;
+        }
+        else if (tipoCarne.equalsIgnoreCase("Picanha")) {
+            precoKg = 6.9;
+        }
+        else {
+            System.out.println("Tipo de carne Inexistente.");
+            isTipoCarneValido = false;
+        }
+
+        if (isTipoCarneValido) {
+
+            if (quantidadesKg > 5) {
+                precoKg += 0.9;
+            }
+
+            if (opcao.equalsIgnoreCase("1") || opcao.equalsIgnoreCase("Sim") ) {
+                isTabajara = true;
+                porcentagemDesconto = 5;
+            }
+
+            valorBruto = quantidadesKg * precoKg;
+            valorDesconto = valorBruto * (porcentagemDesconto / 100);
+            valorAPagar = valorBruto - valorDesconto;
+
+            System.out.println("----------- Nota Fiscal -----------");
+            System.out.printf("Tipo: %s (%.2f kg)%n", tipoCarne, quantidadesKg);
+            System.out.printf("Preço por Kg - R$ %.2f%n", precoKg);
+            System.out.printf("Valor Bruto - R$ %.2f%n", valorBruto);
+            System.out.println("Cartão Tabajara: " + (isTabajara ? "Sim" : "Não"));
+            System.out.printf("Desconto (%.0f%%) - R$ %.2f%n", porcentagemDesconto, valorDesconto);
+            System.out.printf("Total a pagar - R$ %.2f%n", valorAPagar);
+        }
 
     }
 
@@ -1215,10 +1271,10 @@ public class DecisionStructure {
 //        exerciceTwentyFive();
 //        System.out.println("---------- Exercicio 26 --------------\n");
 //        exerciceTwentySix();
-        System.out.println("---------- Exercicio 27 --------------\n");
-        exerciceTwentySeven();
-//        System.out.println("---------- Exercicio 28 --------------\n");
-//        exerciceTwentyEight();
+//        System.out.println("---------- Exercicio 27 --------------\n");
+//        exerciceTwentySeven();
+        System.out.println("---------- Exercicio 28 --------------\n");
+        exerciceTwentyEight();
     }
 
 }
