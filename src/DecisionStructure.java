@@ -1095,7 +1095,56 @@ public class DecisionStructure {
             morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.
          */
 
+        String frutaEscolhida;
+        double porcentagemDesconto = 0;
+        double precoKg = 0;
+        double quantidadeKg;
+        double valorBruto;
+        double valorDesconto;
+        double valorAPagar;
 
+        System.out.println("Digite a fruta que deseja comprar (Morango, Maça): ");
+        frutaEscolhida = input.nextLine();
+
+        System.out.println("Digite a quantidade de quilos: ");
+        quantidadeKg = Double.parseDouble(input.nextLine());
+
+        if (frutaEscolhida.equalsIgnoreCase("Morango")) {
+            if (quantidadeKg <= 5) {
+                precoKg = 2.5;
+            } else {
+                precoKg = 2.2;
+            }
+        }
+        else if (frutaEscolhida.equalsIgnoreCase("Maça") ||
+                frutaEscolhida.equalsIgnoreCase("Maca") ||
+                frutaEscolhida.equalsIgnoreCase("Maçã") ||
+                frutaEscolhida.equalsIgnoreCase("Macã")) {
+            if (quantidadeKg <= 5) {
+                precoKg = 1.8;
+            } else {
+                precoKg = 1.5;
+            }
+        }
+        else {
+            System.out.println("Fruta invalida.");
+        }
+
+        valorBruto = quantidadeKg * precoKg;
+
+        if (quantidadeKg > 8 || valorBruto > 25) {
+            porcentagemDesconto = 10;
+        }
+
+        valorDesconto = valorBruto * (porcentagemDesconto / 100);
+        valorAPagar = valorBruto - valorDesconto;
+
+        System.out.println("----------- Nota Fiscal -----------");
+        System.out.printf("Preço por KG - R$ %.2f%n", precoKg);
+        System.out.printf("Quilos - %.2f%n", quantidadeKg);
+        System.out.printf("Valor Bruto - R$ %.2f%n", valorBruto);
+        System.out.printf("Desconto (%.0f%%) - R$ %.2f%n", porcentagemDesconto, valorDesconto);
+        System.out.printf("Total a pagar - R$ %.2f%n", valorAPagar);
 
     }
 
@@ -1169,10 +1218,10 @@ public class DecisionStructure {
 //        exerciceTwentyFour();
 //        System.out.println("---------- Exercicio 25 --------------\n");
 //        exerciceTwentyFive();
-        System.out.println("---------- Exercicio 26 --------------\n");
-        exerciceTwentySix();
-//        System.out.println("---------- Exercicio 27 --------------\n");
-//        exerciceTwentySeven();
+//        System.out.println("---------- Exercicio 26 --------------\n");
+//        exerciceTwentySix();
+        System.out.println("---------- Exercicio 27 --------------\n");
+        exerciceTwentySeven();
 //        System.out.println("---------- Exercicio 28 --------------\n");
 //        exerciceTwentyEight();
     }
